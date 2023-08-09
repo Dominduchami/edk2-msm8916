@@ -85,7 +85,7 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {"HLOS 3.1",          0x80D00000, 0x02500000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
     {"Display Reserved",  0x83200000, 0x00800000, AddMem, MEM_RES, WRITE_THROUGH, MaxMem, WRITE_THROUGH},
     {"HLOS 3.2",          0x83A00000, 0x00600000, AddMem, SYS_MEM, SYS_MEM_CAP, BsData, WRITE_BACK},
-    {"HLOS 4",           0x84000000, 0x02000000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
+    {"HLOS 4",            0x84000000, 0x02000000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
     {"TZ Apps",           0x86000000, 0x00300000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
     {"SMEM",              0x86300000, 0x00100000, AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED},
     {"TZ/HYP",            0x86400000, 0x00280000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
