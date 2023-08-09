@@ -21,4 +21,4 @@
 			compatible = "qcom,mdss-dsi-panel";
 		};
 	};
-}
+};
