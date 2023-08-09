@@ -35,6 +35,7 @@
   EmbeddedPkg/EmbeddedPkg.dec
   ArmPkg/ArmPkg.dec
   ArmPlatformPkg/ArmPlatformPkg.dec
+  MSM8909Pkg/MSM8909Pkg.dec
 
 [LibraryClasses]
   BaseLib
@@ -70,6 +71,7 @@
 
 [Pcd]
   gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVersionString
+  gMSM8909PkgTokenSpaceGuid.PcdMipiFrameBufferWidth
 
 [FixedPcd]
   gArmTokenSpaceGuid.PcdVFPEnabled
