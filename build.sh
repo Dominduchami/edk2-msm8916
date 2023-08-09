@@ -10,12 +10,11 @@ export WORKSPACE=$PWD/workspace
 # not actually GCC5; it's GCC7 on Ubuntu 18.04.
 GCC5_AARCH64_PREFIX=aarch64-linux-gnu- build -s -n 0 -a AARCH64 -t GCC5 -p MSM8909Pkg/Devices/surnia.dsc
 
-dtc -I dts -O dtb device_specific/surnia.dts -o device_specific/surnia.dtb
+#dtc -I dts -O dtb device_specific/surnia.dts -o device_specific/surnia.dtb
 
 #cd BootShim
 #make UEFI_BASE=0x80200000 UEFI_SIZE=0x00100000
 #rm BootShim.elf
 #cd ..
 cat workspace/Build/MSM8909Pkg/DEBUG_GCC5/FV/MSM8909PKG_UEFI.fd > workspace/bootpayload.bin
-gzip -c < workspace/bootpayload.bin >MSM8909_UEFI.fd.gz
-cat device_specific/surnia.dtb >>MSM8909_UEFI.fd.gz
+cat workspace/bootpayload.bin device_specific/msm8916-motorola-surnia.dtb >uefi.img
