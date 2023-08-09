@@ -89,9 +89,11 @@ static ARM_MEMORY_REGION_DESCRIPTOR_EX gDeviceMemoryDescriptorEx[] = {
     {"TZ Apps",           0x86000000, 0x00300000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
     {"SMEM",              0x86300000, 0x00100000, AddMem, MEM_RES, UNCACHEABLE, Reserv, UNCACHED_UNBUFFERED},
     {"TZ/HYP",            0x86400000, 0x00280000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
-    //{"HLOS 5",            0x86680000, 0x00080000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
-    {"MPSS/EFS/DHMS/PIL", 0x86700000, 0x06C00000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
-    {"HLOS 6",            0x8D300000, 0x32D00000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
+    {"Reserved",          0x86680000, 0x00080000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
+    {"MPSS/EFS/DHMS/PIL", 0x86700000, 0x05C00000, AddMem, SYS_MEM, SYS_MEM_CAP, Reserv, NS_DEVICE},
+    {"HLOS 6",            0x8C300000, 0x22CF2000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
+    /* 0xAEFF2000 - 0xAF000000 -> carveout*/
+    {"HLOS 6",            0xAF000000, 0x11000000, AddMem, SYS_MEM, SYS_MEM_CAP, Conv,   WRITE_BACK},
     /*--------------------- Other Regions ----------------------*/
     {"IMEM Boot Base",    0x08600000, 0x00020000, NoHob,  SYS_MEM, INITIALIZED, Conv,   NS_DEVICE},
     {"IMEM Cookie Base",  0x08600000, 0x00001000, AddMem, MMAP_IO, INITIALIZED, Conv,   NS_DEVICE},
